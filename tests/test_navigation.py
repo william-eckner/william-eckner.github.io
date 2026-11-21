@@ -63,7 +63,7 @@ class NavigationTests(unittest.TestCase):
                 self.assertEqual(len([a for a in page.links if a.get('aria-current') == 'page']), 1)
                 header = re.search(r'<header>(.*?)</header>', source, re.S).group(1)
                 if node['path'] == 'index.html':
-                    self.assertIn('William Eckner', header)
+                    self.assertIn('William J. Eckner', header)
                     self.assertIn('Postdoctoral researcher @ the PTB', header)
                 else:
                     expected = 'Publications' if node['path'] == 'publications.html' else 'Physics notes'
